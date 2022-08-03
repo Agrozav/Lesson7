@@ -1,0 +1,74 @@
+# Примеры list comprehension
+
+# Пример первый
+nums = [n for n in range(1,10)]
+print(nums)
+
+# Пример второй
+a = [1 for i in range(8)]
+print(a)
+
+#Пример третий
+b = [i**2 for i in range(8)]
+print(b)
+
+#Пример четвертый
+c = [i%4 for i in range(8,17)]
+print(c)
+
+#Пример пятый
+d = [i for i in 'HillelSchoolIsBetter']
+print(d)
+
+#Примеры DICT comprehension
+
+#Первый пример
+e = {str(i):i for i in [1,2,3,4,5]}
+print(e)
+
+#Второй пример
+countrys = ['Ucraine','Moldavia','Spain','Germany','Portugal','Australy']
+
+{f:len(f) for f in countrys}
+print(countrys)
+
+#Третий пример
+countrys = {f:f.capitalize() for f in countrys}
+print(countrys)
+
+#Четвертый пример
+countrys = {f:i for i,f in enumerate(countrys)}
+print(countrys)
+
+#Пятый пример
+countrys = {v:k for k,v in countrys.items()}
+print(countrys)
+
+#Пять примеров с set comprehensions
+
+#Первый пример
+student_lis = ['ALex','Vladimir','Olexandra','Ilia','Ivan','Mikola']
+newset = {element + ' Студент Hillel' for element in student_lis}
+print('Список людей - ', student_lis)
+print('Эти люди ',newset)
+
+#Второй пример
+list = [1,2,3,4,5,6]
+n_set = {element**2 for element in list}
+print(n_set)
+
+#Третий пример
+l3 = [9,8,7,6]
+nm_set = {element % 2 for element in l3}
+print(nm_set)
+
+#Четвёртый пример
+l4 = [10,20,30,40,50]
+set4 = {element/10 for element in l4}
+print(set4)
+
+#Пятый пример
+
+l5 = int(input('fill your year of birth '))
+set4 = {2022-element for element in l5}
+print('Your age is ',l5)  '''Если можете обьяснить почему этот пример выдаёт ошибку, не могу понять'''
